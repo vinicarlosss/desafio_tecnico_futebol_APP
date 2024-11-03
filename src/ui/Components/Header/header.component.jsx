@@ -1,10 +1,18 @@
 import "./header.style.css";
 import logo from "../../../assets/logo.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export function Header({ handleChangeContent }) {
-  const [selected, setSelected] = useState("Home");
+export function Header() {
+  const [selected, setSelected] = useState("");
+  const navigate = useNavigate();
+
+  function handleChange(selected){
+    setSelected(selected);
+    navigate(`/${selected}`);
+  };
+
+
   return (
     <header className="header_main">
       <img className="header-logo_img" src={logo} alt="imagem da logo" />
@@ -12,9 +20,9 @@ export function Header({ handleChangeContent }) {
         <ul className="header-nav_ul">
           <li>
             <Link
-              onClick={() => handleChangeContent("Home", setSelected)}
+              onClick={() => handleChange("")}
               className={`header-ul_li ${
-                selected === "Home" ? "selected" : null
+                selected === "" ? "selected" : null
               }`}
             >
               Início
@@ -22,7 +30,7 @@ export function Header({ handleChangeContent }) {
           </li>
           <li>
             <Link
-              onClick={() => handleChangeContent("FindTeam", setSelected)}
+              onClick={() => handleChange("FindTeam")}
               className={`header-ul_li ${
                 selected === "FindTeam" ? "selected" : null
               }`}
@@ -32,7 +40,7 @@ export function Header({ handleChangeContent }) {
           </li>
           <li>
             <Link
-            onClick={() => handleChangeContent("FindPlayer", setSelected)}
+            onClick={() => handleChange("FindPlayer")}
               className={`header-ul_li ${
                 selected === "FindPlayer" ? "selected" : null
               }`}
@@ -42,7 +50,7 @@ export function Header({ handleChangeContent }) {
           </li>
           <li>
             <Link
-            onClick={() => handleChangeContent("Matchweek", setSelected)}
+            onClick={() => handleChange("Matchweek")}
               className={`header-ul_li ${
                 selected === "Matchweek" ? "selected" : null
               }`}

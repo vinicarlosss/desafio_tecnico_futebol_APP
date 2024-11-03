@@ -6,5 +6,9 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <uiScreens.Home />
+    },
+    {
+        path: "/FindPlayer",
+        element: <uiScreens.Home />,
     }
 ]);
