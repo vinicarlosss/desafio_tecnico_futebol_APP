@@ -48,16 +48,6 @@ export function Header() {
               Pesquisar jogador
             </Link>
           </li>
-          <li>
-            <Link
-            onClick={() => handleChange("Matchweek")}
-              className={`header-ul_li ${
-                selected === "Matchweek" ? "selected" : null
-              }`}
-            >
-              Rodadas
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>
