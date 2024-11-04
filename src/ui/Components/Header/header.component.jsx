@@ -28,26 +28,6 @@ export function Header({optionSelected}) {
               Início
             </Link>
           </li>
-          <li>
-            <Link
-              onClick={() => handleChange("FindTeam")}
-              className={`header-ul_li ${
-                selected === "FindTeam" ? "selected" : null
-              }`}
-            >
-              Pesquisar time
-            </Link>
-          </li>
-          <li>
-            <Link
-            onClick={() => handleChange("FindPlayer")}
-              className={`header-ul_li ${
-                selected === "FindPlayer" ? "selected" : null
-              }`}
-            >
-              Pesquisar jogador
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>
