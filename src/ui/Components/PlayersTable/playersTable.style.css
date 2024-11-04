@@ -1,0 +1,30 @@
+.player-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.player-table th, .player-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.player-table th {
+    background-color: #f2f2f2;
+}
+
+.player-row {
+    transition: all 0.3s ease;
+}
+
+.player-row:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-4px); /* Efeito de elevação */
+    cursor: pointer; /* Muda o cursor para indicar clicabilidade */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o efeito de botão */
+}
+
+.player-link{
+    text-decoration: none;
+    color: #333;
+}

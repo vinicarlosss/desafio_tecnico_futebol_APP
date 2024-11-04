@@ -3,8 +3,8 @@ import logo from "../../../assets/logo.webp";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export function Header() {
-  const [selected, setSelected] = useState("");
+export function Header({optionSelected}) {
+  const [selected, setSelected] = useState(optionSelected);
   const navigate = useNavigate();
 
   function handleChange(selected){

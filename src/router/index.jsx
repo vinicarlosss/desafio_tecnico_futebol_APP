@@ -8,6 +8,10 @@ export const router = createBrowserRouter([
         element: <uiScreens.Home />
     },
     {
+        path: "/team/:teamId",
+        element: <uiScreens.Team/>
+    },
+    {
         path: "/FindPlayer",
         element: <uiScreens.Home />,
     }

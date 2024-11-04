@@ -32,7 +32,7 @@ export function Home() {
   }, []);
   return (
     <>
-      <Header />
+      <Header optionSelected={""}/>
       <main className="home_main">
         <table className="ranking-table">
           <thead>
